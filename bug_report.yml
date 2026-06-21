@@ -1,0 +1,81 @@
+name: Bug report
+description: Something in bctx is broken or behaving unexpectedly.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. The more detail you give, the faster we can fix it.
+
+  - type: input
+    id: version
+    attributes:
+      label: bctx version
+      description: Output of `bctx --version`
+      placeholder: "0.1.7"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Linux (x86_64, glibc)
+        - Linux (x86_64, musl)
+        - Linux (aarch64)
+        - Windows 10/11
+        - Other (mention in description)
+    validations:
+      required: true
+
+  - type: input
+    id: agent
+    attributes:
+      label: AI agent
+      description: Which agent were you using? (Claude Code, Cursor, Windsurf, Codex, etc.)
+      placeholder: "Claude Code 1.4.2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Clear description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run `bctx init --agent claude`
+        2. Open Claude Code
+        3. Ask: "..."
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `bctx doctor`
+      render: shell
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      render: shell

@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://betterctx.com/docs/getting-started
+    about: Read the docs before filing an issue — most questions are answered there.
+  - name: 💬 General questions / support
+    url: https://betterctx.com/contact
+    about: For usage questions, billing, or anything that isn't a bug.
+  - name: 🔒 Security issue
+    url: https://github.com/better-ctx-org/bctx/blob/main/SECURITY.md
+    about: Please report security issues privately — do not open a public issue.
+  - name: 📦 Release downloads
+    url: https://github.com/better-ctx-org/bctx-releases/releases
+    about: Pre-built binaries for macOS, Linux, and Windows.
